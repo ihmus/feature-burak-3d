@@ -4,16 +4,14 @@
     <visual>
       <origin xyz="0 0 0" rpy="1.57 0 0"/>
       <geometry>
-        <mesh filename="modelfiles/real_map.obj" scale="0.1 0.1 0.1"/>
+        <mesh filename="modelfiles/real-2.obj" scale="1 1 1"/>
       </geometry>
-      <material name="solid_red">
-        <color rgba="0 0.77 0 1"/>  <!-- kırmızı, opak -->
-      </material>
+      
     </visual>
     <collision>
       <origin xyz="0 0 0" rpy="0 0 0"/>
       <geometry>
-        <mesh filename="modelfiles/real_map.obj" scale="0.01 0.01 0.01"/>
+        <mesh filename="modelfiles/real-2.obj" scale="1 1 1"/>
       </geometry>
     </collision>
     <inertial>
