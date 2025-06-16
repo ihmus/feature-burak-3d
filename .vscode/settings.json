@@ -1,0 +1,12 @@
+{
+    "python.languageServer": "Default",
+    "python.analysis.languageServerMode": "full",
+    "python.analysis.extraPaths": [
+    "./venv/lib/python3.*/site-packages",
+    "./typings" // kullandığınız Python sürümüne göre düzenleyin
+  ] ,
+  "python.analysis.useLibraryCodeForTypes": true,
+  "python.analysis.autoImportCompletions": true,
+  "python.analysis.indexing": true,
+
+}
