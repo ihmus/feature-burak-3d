@@ -1,3 +1,4 @@
+from cgitb import text
 import pybullet as p
 import pybullet_data
 import time,os
@@ -34,15 +35,14 @@ class PhysicsSimulation:
         # Zemin ekle
         
         self.droneId = p.loadURDF(f"{os.getcwd()}/scane/models/drone.urdf",basePosition=[0,0,100.23])
-
+        
         self.planeId = p.loadURDF(f"{os.getcwd()}/scane/models/real_map.urdf",basePosition=[0,0,0])
         # Yerçekimi ayarla
         p.setGravity(0, 0, -9.1)
         p.changeDynamics(
-            self.planeId,-1,mass=0.001
+            self.planeId,-1,mass=0.000
         )
-        
-        
+
 
     
     
