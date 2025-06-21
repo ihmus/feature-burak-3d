@@ -1,17 +1,19 @@
-<?xml version="1.0" ?>
+<?xml version="1.0"?>
 <robot name="real_map">
   <link name="base_link">
     <visual>
-      <origin xyz="0 0 0" rpy="1.57 0 0"/>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
       <geometry>
-        <mesh filename="modelfiles/real-2.obj" scale="1 1 1"/>
+        <mesh filename="modelfiles/Untitled.dae"
+              scale="1 1 1"/>
       </geometry>
       
     </visual>
     <collision>
       <origin xyz="0 0 0" rpy="0 0 0"/>
       <geometry>
-        <mesh filename="modelfiles/real-2.obj" scale="1 1 1"/>
+        <mesh filename="modelfiles/Untitled.dae"
+              scale="1 1 1"/>
       </geometry>
     </collision>
     <inertial>
