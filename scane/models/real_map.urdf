@@ -4,15 +4,21 @@
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0"/>
       <geometry>
-        <mesh filename="modelfiles/Untitled.dae"
+        <mesh filename="modelfiles/real-3.obj"
               scale="1 1 1"/>
       </geometry>
-      
+      <geometry>
+        <box size="100 100 1"/>
+      </geometry>
+      <material name="my_mat">
+        <texture filename="package:texturefiles/real-3.png"/>
+
+      </material>
     </visual>
     <collision>
       <origin xyz="0 0 0" rpy="0 0 0"/>
       <geometry>
-        <mesh filename="modelfiles/Untitled.dae"
+        <mesh filename="modelfiles/real-3.obj"
               scale="1 1 1"/>
       </geometry>
     </collision>
