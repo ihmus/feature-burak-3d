@@ -4,7 +4,8 @@
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0"/>
       <geometry>
-        <mesh filename="modelfiles/mq9model.obj" scale="0.2 0.2 0.2"/>
+        <mesh filename="modelfiles/mq9model.obj"
+              scale="0.2 0.2 0.2"/>
       </geometry>
       <material name="my_mat">
         <texture filename="package:texturefiles/mq9model.jpg"/>
@@ -14,7 +15,8 @@
     <collision>
       <origin xyz="0 0 0" rpy="0 0 0"/>
       <geometry>
-        <mesh filename="modelfiles/mq9model.obj" scale="0.2 0.2 0.2"/>
+        <mesh filename="modelfiles/mq9model.obj"
+              scale="0.2 0.2 0.2"/>
       </geometry>
     </collision>
     <inertial>

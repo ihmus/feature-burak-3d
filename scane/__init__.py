@@ -1,1 +1,1 @@
-from .main import Simulation
+from .Simulator3DWidget import Simulation

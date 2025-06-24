@@ -35,14 +35,14 @@ class Model(ABC):
         pass
     
     @abstractmethod 
-    def get_scale(self) -> np.ndarray:
+    def get_scale(self) -> list:
         """Modelin ölçeğini döndürür. Varsayılan olarak birim ölçek."""
         pass
     
     def get_mesh_file(self):
         """Drone'un mesh dosyasını döndürür."""
         mesh_file =  p.getVisualShapeData(self.model_id, physicsClientId=self.physics_client)[0][4].decode('utf-8')
-        
+        print(f"Mesh file: {mesh_file}")
         return mesh_file
     
     def get_urdf_file(self) -> str:
@@ -70,7 +70,7 @@ class Model(ABC):
             print("URDF dosyasında texture bulunamadı.")
             raise ValueError("URDF dosyasında texture bulunamadı.")
         
-        
+        print(f"Texture file: {tex_file}")
         return tex_file
 
 

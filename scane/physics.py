@@ -9,7 +9,6 @@ from key_event_manager import KeyEventManager
 
 from objects.drone import Drone
 from objects.Floor import Floor
-from objects.Camera import Camera
 from objects.Model import Model
 # pybulletin sadece fizik küytüphaneleri / tasarım için opengl veyahutta diğer basit tasarım 
 
@@ -31,7 +30,7 @@ class PhysicsSimulation:
         
         p.configureDebugVisualizer(p.COV_ENABLE_KEYBOARD_SHORTCUTS, 1 if use_short_cuts else 0)
         p.setAdditionalSearchPath(pybullet_data.getDataPath())
-        p.setGravity(0, 0, -9.81, physicsClientId=self.physicsClient)
+        p.setGravity(0, 0, -9.88, physicsClientId=self.physicsClient)
     
     
     
@@ -92,19 +91,19 @@ def main():
     sim.add_model(floor,position=[0, 0, 0], orientation=[0, 0, 0, 1])
     def apply_forward_force():
         """Drone'a ileri yönde kuvvet uygular."""
-        force = [0, 0, -10]
+        force = [-10, 0, 0]
         drone.apply_force(force)
     def apply_backward_force():
         """Drone'a geri yönde kuvvet uygular."""
-        force = [0, 0, 10]
+        force = [10, 0, 0]
         drone.apply_force(force)
     def apply_left_force():
         """Drone'a sola doğru kuvvet uygular."""
-        force = [-10, 0, 0]
+        force = [0, 0, 10]
         drone.apply_force(force)
     def apply_right_force():
         """Drone'a sağa doğru kuvvet uygular."""
-        force = [10, 0, 0]
+        force = [0, 0, -10]
         drone.apply_force(force)
     def apply_upward_force():
         """Drone'a yukarı doğru kuvvet uygular."""
@@ -117,7 +116,7 @@ def main():
         
     def apply_pitch():
         """Drone'a pitch uygular."""
-        torque = [0, 0, 10]
+        torque = [0, 0, -10]
         drone.apply_torque(torque)
     def apply_roll():
         """Drone'a roll uygular."""
